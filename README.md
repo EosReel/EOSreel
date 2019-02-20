@@ -1,2 +1,2 @@
-# EosReel
+# EOSreel
 EosReel.io
