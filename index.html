@@ -47,12 +47,12 @@
 					<input type="text" name="signature" class="form-de form-control"/>
 				</div>
 				<div class="row">
-					<label class="row-head">Sha256(Signature,Uint8Array(66)) : </label>
+					<label class="row-head">Sha256('Signature',Uint8Array(66)) : </label>
 					<input readonly="true" type="text" name="sha256_signature" class="form-de form-control"/>
 				</div>
 				<div class="row">
 					<label class="row-head">Hash Format : </label>
-					<input readonly="true" type="text" name="hash_format" class="form-de form-control" value="PostScale30(Sha256(sha256('Signature')):(sha256('Combind Seed')))"/>
+					<input readonly="true" type="text" name="hash_format" class="form-de form-control" value="PostScale30(Sha256(sha256('Signature',Uint8Array(66))):(sha256('Combind Seed')))"/>
 				</div>
 
 				<div class="row">
