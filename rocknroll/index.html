@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EOSreel.io - RockNRoll Verify</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1><a href="https://eosreel.io" target="_blank">EOSreel.io</a> - Verification process of RockNRoll game results</h1>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<label class="row-head">User Name : </label>
+					<input type="text" name="user_name" class="form-de form-control" />
+				</div>
+				<div class="row">
+					<label class="row-head">Bet Count : </label>
+					<input type="text" name="bet_count" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Time Stamp : </label>
+					<input type="text" name="time_stamp" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Bet Id : </label>
+					<input type="text" name="bet_id" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Combind Seed : </label>
+					<input readonly="true" type="text" name="combind_seed" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">sha256(Combind Seed) : </label>
+					<input readonly="true" type="text" name="sha256_combind_seed" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Public Key* : </label>
+					<input readonly="true" type="text" name="public_key" class="form-de form-control" value="EOS6V5dNVDqhUVEek8NzcveGRvdqjLnRbinPh9UTfQwYU37TjY8A5"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Signature : </label>
+					<input type="text" name="signature" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Sha256(Signature,Uint8Array(66)) : </label>
+					<input readonly="true" type="text" name="sha256_signature" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Hash Format : </label>
+					<input readonly="true" type="text" name="hash_format" class="form-de form-control" value="PostScale8(Sha256(sha256('Signature')):(sha256('Combind Seed')))"/>
+				</div>
+
+				<div class="row">
+					<label class="row-head">Verify : </label>
+					<input readonly="true" type="text" name="Verify_Result" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">sha256(Signature Hash):(CombindSeed Hash) : </label>
+					<input readonly="true" type="text" name="full_hashed" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">last 8 digits : </label>
+					<input readonly="true" type="text" name="last_digits" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Multiple Bonus : </label>
+					<input readonly="true" type="text" name="Result_bonus" class="form-de form-control"/>
+				</div>
+				<div class="row">
+					<label class="row-head">Result : </label>
+					<input readonly="true" type="text" name="Result" class="form-de form-control"/>
+				</div>
+
+			</div>
+			<table class="table table-bordered" id="table_result" name="table_result">
+				<tbody>
+				<tr>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="panel-footer">
+			* public key - <a href="https://www.eosx.io/account/eosreelrockn?mode=contract&sub=tables&table=config&limit=10" target="_blank">https://eosx.io/</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/hashes.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
